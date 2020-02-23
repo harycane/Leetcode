@@ -34,3 +34,21 @@ class Solution:
         return res
 
         # T O(n) S O(n)
+
+# https://leetcode.com/problems/top-k-frequent-elements/discuss/498233/python3-Using-Counter-from-collections
+from collections import Counter as ct
+
+
+class Solution:
+    def topKFrequent(self, n, k):
+        #         freq = (ct(n).most_common())
+        #         #print(freq) [(1, 3), (2, 2), (3, 1)]
+
+        #         res = [el[0] for el in freq]
+        #         #print(res) [1, 2, 3]
+
+        #         #print(res[:k]) [1, 2]
+
+        #         return res[:k]
+
+        return [el[0] for el in ct(n).most_common(k)]
