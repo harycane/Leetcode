@@ -27,5 +27,6 @@ class Solution:
         self.dfs(grid, i, j + 1)
         self.dfs(grid, i, j - 1)
 
-# T O(m*n)  S O(1)
+# In that case, there are N*M vertexes and slightly less than 4*N*M edges, their sum is still O(N*M)
+# T (E+V) = O(m*n)  S O(1)
 
